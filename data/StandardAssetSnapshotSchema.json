@@ -1,0 +1,71 @@
+{
+    "meta": {
+        "snapshot_id": "snap_20251031_001",
+        "period": "2025-10",
+        "record_date": "2025-10-31",
+        "base_currency": "CNY",
+        "type": "OPENING"
+    },
+    "exchange_rates": {
+        "HKD": 0.92,
+        "USD": 7.25,
+        "CNY": 1.00
+    },
+    "accounts": [
+        {
+            "account_id": "your_account",
+            "name": "建设银行-借记卡",
+            "category": "CASH",
+            "currency": "CNY",
+            "type": "BANK_CARD",
+            "balance": 20000.00
+        },
+        {
+            "account_id": "your_account",
+            "name": "支付宝-零钱",
+            "category": "CASH",
+            "currency": "CNY",
+            "type": "DIGITAL_WALLET",
+            "balance": 35000.00
+        },
+        {
+            "account_id": "your_account",
+            "name": "微信-零钱",
+            "category": "CASH",
+            "currency": "CNY",
+            "type": "DIGITAL_WALLET",
+            "balance": 35000.00
+        },
+        {
+            "id": "stock_cn",
+            "name": "国信证券-A股",
+            "category": "SECURITIES",
+            "currency": "CNY",
+            "balance": 150000.00
+        },
+        {
+            "account_id": "your_account",
+            "name": "中银香港-港币账户",
+            "currency": "HKD",
+            "type": "BANK_CARD",
+            "category": "CASH",
+            "balance": 15000.00
+        },
+        {
+            "account_id": "your_account",
+            "name": "中银香港-美元账户",
+            "currency": "USD",
+            "type": "BANK_CARD",
+            "category": "CASH",
+            "balance": 15000.00
+        },
+        {
+            "account_id": "your_account",
+            "name": "长桥证券-美股",
+            "category": "SECURITIES",
+            "currency": "USD",
+            "balance": 150000.00,
+            "note": "持仓: "
+        }
+    ]
+}
