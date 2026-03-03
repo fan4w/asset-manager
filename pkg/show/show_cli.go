@@ -24,7 +24,7 @@ func PrintWealthReport(sums []model.AssetSummary) {
 	}
 }
 
-func PrintTrendReport(sums []model.AssetSummary) {
+func PrintReportByMonths(sums []model.AssetSummary) {
 	if len(sums) < 2 {
 		return
 	}

@@ -31,7 +31,7 @@ func main() {
 
 	// 展示报告
 	show.PrintWealthReport(summaries)
-	show.PrintTrendReport(summaries)
+	show.PrintReportByMonths(summaries)
 
 	snapshot, err := repo.GetByPeriod("2025-11")
 	if err != nil {
