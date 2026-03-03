@@ -32,8 +32,38 @@ func PrintReportByMonths(sums []model.AssetSummary) {
 	for i := 1; i < len(sums); i++ {
 		prev := sums[i-1]
 		curr := sums[i]
-		report := analysis.CompareMonthsInBaseCurrency(prev, curr)
-		fmt.Println(report)
+		diff := analysis.CompareMonthsInBaseCurrency(prev, curr)
+		trend := "持平"
+		if diff > 0 {
+			trend = "增长 📈"
+		} else if diff < 0 {
+			trend = "减少 📉"
+		}
+
+		fmt.Printf("%s -> %s: 变动 %+10.2f (%s)\n",
+			prev.Period, curr.Period, diff, trend)
+	}
+}
+
+func PrintTrendReportByCategory(sums []model.AssetSummary) {
+	if len(sums) < 2 {
+		return
+	}
+	fmt.Println("\n=== 📊 趋势分析 by Category (Month over Month) ===")
+	for i := 1; i < len(sums); i++ {
+		prev := sums[i-1]
+		curr := sums[i]
+		diff := analysis.CompareMonthsByCategory(prev, curr)
+		fmt.Printf("%s -> %s:\n", prev.Period, curr.Period)
+		for category, change := range diff {
+			trend := "持平"
+			if change > 0 {
+				trend = "增长 📈"
+			} else if change < 0 {
+				trend = "减少 📉"
+			}
+			fmt.Printf("  %s: %+10.2f (%s)\n", category, change, trend)
+		}
 	}
 }
 
